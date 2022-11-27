@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #block {
+            height: 100px;
+            width: 300px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+    <title>hELLO</title>
+</head>
+<body>
+    <div id="block" >PLEASE!</div>
+    <script>
+        let a = window.document.getElementById('block')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar() { 
+            a.innerText = 'HELP ME! PLEASE!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'HEY! YOU!!!'
+            a.style.background = 'yellow'
+            a.style.color = 'black'
+        }
+        function sair() {
+            a.innerText = 'NOO! COME BACK HERE!!'
+            a.style.background = 'blue'
+        }
+    </script>
+</body>
+</html>

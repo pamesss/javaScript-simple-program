@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .bod{
+            width: 40%;
+            height: 500px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            margin: 50px auto;
+            box-shadow: rgba(82, 56, 56, 0.5) 0px 5px 15px 10px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        #num1, #num2 {
+            font-size: 1.2em;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 40%;
+            text-align: center;
+            height: 30px;
+        }
+        #btn {
+            display: block;
+            margin: 10px auto;
+            font-size: 1.2em;
+            width: 20%;
+        }
+        #result {
+            margin-top: 40px;
+            border: 1px black solid;
+            height: 25px;
+            padding: 10px 20px 30px 20px;
+            font-size: 1.2em;
+
+        }
+    </style>
+    <title>Adding...</title>
+</head>
+<body>
+    <div class="bod">
+        <h1>Adding values!</h1>
+        <input type="number" name="num1" id="num1"> +
+        <input type="number" name="num2" id="num2">
+        <input type="button" id="btn" value="Add" onclick="add()">
+        <div id="result">Result...</div>
+    </div>
+
+    <script>
+        let res = window.document.querySelector('div#result')
+        res.style.color = 'grey'
+        function add() {
+            let n1 = window.document.getElementById('num1')
+            let n2 = window.document.getElementById('num2')
+            
+
+            let num01 = Number(n1.value)
+            let num02 = Number(n2.value)
+            let soma = (num01 + num02)
+
+            res.innerHTML = `<strong>${num01}</strong> plus <strong>${num02}</strong> equals <strong>${soma}</strong>.`
+            res.style.color = 'black'
+        }
+    </script>
+</body>
+</html>
